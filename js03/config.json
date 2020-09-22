@@ -1,0 +1,16 @@
+{
+    "server": {
+        "port": 8080
+    },
+    "db": {
+        "dbname": "database_name",
+        "host": "127.0.0.1",
+        "port": 27017,
+        "username": "dev",
+        "password": "dev123"
+    },
+    "mail": {
+        "key": "1t2fu1j9j1f91ffl1fgkgkasdjm",
+        "secret": "asdg728g9yhg89g981hhg191g4"
+    }
+}
