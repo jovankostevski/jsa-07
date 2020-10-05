@@ -1,0 +1,16 @@
+{
+    "server": {
+        "port": 8100
+    },
+    "db": {
+        "host": "",
+        "port": 1000,
+        "username": "",
+        "password": "",
+        "dbname": ""
+    },
+    "email": {
+        "api_key": "",
+        "secret": ""
+    }
+}
