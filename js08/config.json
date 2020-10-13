@@ -1,0 +1,16 @@
+{
+    "server": {
+        "port": 10000
+    },
+    "db": {
+        "host": "cluster0.id4yv.mongodb.net",
+        "port": 1,
+        "username": "dev",
+        "password": "dev1234",
+        "dbname": "baza1"
+    },
+    "email": {
+        "api_key": "",
+        "secret": ""
+    }
+}
