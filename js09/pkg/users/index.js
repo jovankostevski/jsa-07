@@ -18,11 +18,11 @@ const Create = (data) => {
 };
 
 const GetAll = () => {
-    return User.find({});
+    return User.find({}, {password: 0});
 };
 
 const GetOne = (id) => {
-    return User.find({_id: id});
+    return User.findOne({_id: id});
 };
 
 const GetOneByEmail = (email) => {

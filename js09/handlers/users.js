@@ -29,19 +29,46 @@ const create = async (req, res) => {
 };
 
 const getAll = async (req, res) => {
-    res.status(200).send('ok');
+    try {
+        let us = await UserModel.GetAll();
+        return res.status(200).send(us);
+    }catch (err) {
+        console.error(err);
+        return res.status(500).send('Internal server error');
+    }
 };
 
 const getOne = async (req, res) => {
-    res.status(200).send('ok');
+    try {
+        let u = await UserModel.GetOne(req.params.id);
+        if(!u) {
+            return res.status(404).send('Not found');
+        }
+        return res.status(200).send(u);
+    }catch (err) {
+        console.error(err);
+        return res.status(500).send('Internal server error');
+    }
 };
 
 const update = async (req, res) => {
-    res.status(200).send('ok');
+    try {
+        await UserModel.Update(req.params.id, req.body);
+        return res.status(204).send('No content');
+    }catch (err) {
+        console.error(err);
+        return res.status(500).send('Internal server error');
+    }
 };
 
 const remove = async (req, res) => {
-    res.status(200).send('ok');
+    try {
+        await UserModel.Remove(req.params.id);
+        return res.status(204).send('No content');
+    }catch (err) {
+        console.error(err);
+        return res.status(500).send('Internal server error');
+    }
 };
 
 module.exports = {

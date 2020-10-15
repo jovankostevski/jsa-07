@@ -1,6 +1,8 @@
 {
     "server": {
-        "port": 10000
+        "port": 10000,
+        "jwt_key": "secretJWT",
+        "session_length": 31436000
     },
     "db": {
         "host": "cluster0.id4yv.mongodb.net",
