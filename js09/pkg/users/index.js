@@ -7,7 +7,9 @@ const User = mongoose.model(
         email: String,
         password: String,
         birthday: Date,
-        phone: String
+        phone: String,
+        register_hash: String,
+        active: Boolean
     },
     'users'
 );
@@ -29,8 +31,16 @@ const GetOneByEmail = (email) => {
     return User.findOne({email: email});
 };
 
+const GetOneByHash = (register_hash) => {
+    return User.findOne({register_hash: register_hash});
+}
+
 const Update = (id, data) => {
     return User.update({_id: id}, data);
+};
+
+const Activate = (id) => {
+    return User.update({_id: id}, {$set: {active: true}});
 };
 
 const Remove = (id) => {
@@ -42,6 +52,8 @@ module.exports = {
     GetAll,
     GetOne,
     GetOneByEmail,
+    GetOneByHash,
     Update,
+    Activate,
     Remove
 }

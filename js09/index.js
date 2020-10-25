@@ -24,6 +24,7 @@ api.use(bodyParser.json());
 api.post('/users', Users.create);
 api.get('/users', Users.getAll);
 api.get('/users/:id', Users.getOne);
+api.patch('/users/activate/:id/:hash', Users.activate);
 api.put('/users/:id', Users.update);
 api.delete('/users/:id', Users.remove);
 

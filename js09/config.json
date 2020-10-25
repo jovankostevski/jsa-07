@@ -13,6 +13,8 @@
     },
     "email": {
         "api_key": "",
-        "secret": ""
+        "domain": "",
+        "email_name": "OurApp",
+        "email_address": "noreply@ourapp.com"
     }
 }
